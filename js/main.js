@@ -4,6 +4,13 @@ const backgrounds = [
     './img/bg1.png',
     './img/bg2.png',
     './img/bg3.png',
+    './img/bg4.jpg',
+    './img/bg5.jpg',
+    './img/bg6.jpg',
+    './img/bg8.jpg',
+    './img/bg9.jpg',
+    './img/bg10.jpg',
+    './img/bg11 .jpg',
 ];
 // 获取衣服图标元素
 const shirtIcon = document.getElementById("shirt-icon");
