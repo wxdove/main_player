@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>音乐盒子</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/audio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="js/snow.js"></script>
+
+</head>
+
+<body id="body" background="./img/bg1.png">
+
+
+    <div class="upper-container">
+        <!-- 唱片背景 -->
+        <div class="record-container">
+            <div class="record-bg">
+                <div id="record-img" class="rotate-play"></div>
+            </div>
+        </div>
+        <div class="introduction-container">
+            <div class="text-container">
+                <div id="music-title">Music</div>
+                <div class="author-container">singer:
+                    <span id="author-name">未知</span>
+                </div>
+                <!-- 滚动歌词 -->
+                <div id="lyrics-container" class="lyrics-container"></div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 音乐播放器主要内容 -->
+    <div class="audio-box">
+        <div class="audio-container">
+            <audio id="audioTag"></audio>
+            <!-- 进度条 -->
+            <div class="a-progress">
+                <div class="pgs-total" id="progress-total">
+                    <div class="pgs-play" id="progress" style="width: 0%;"></div>
+                </div>
+            </div>
+            <!-- 下排控制按钮 -->
+            <div class="a-controls">
+                <!-- 播放时长 -->
+                <div class="time-container">
+                    <span class="played-time" id="playedTime">00:00</span>&nbsp;/&nbsp;
+                    <span class="audio-time" id="audioTime">00:00</span>
+                </div>
+                <!-- 中间按钮 -->
+                <div class="center-button-container">
+                    <!-- 播放模式 -->
+                    <div id="playMode" class="center-icon mode"></div>
+                    <!-- 上一首 -->
+                    <div id="skipForward" class="center-icon s-right"></div>
+                    <!-- 暂停按钮 -->
+                    <div id="playPause" class="icon-play"></div>
+                    <!-- 下一首 -->
+                    <div id="skipBackward" class="center-icon s-left"></div>
+                        <div class="icon-container">
+                            <i class="fa-solid fa-images" id="shirt-icon"></i>
+                        </div>
+                    <!-- 音量调节 -->
+                    <div id="volume" class="center-icon volume"></div>
+                    <button id="fullscreen-btn">
+                        <i class="fa-solid fa-expand"></i> 全屏
+                    </button>
+                    <!-- 音量悬浮窗 -->
+                    <input type="range" id="volumn-togger" name="change" value="70" min="0" max="100" step="1">
+                </div>
+                <!-- 后部按钮 -->
+                <div class="bottom-button-container">
+                    <!-- 列表 -->
+                    <div id="list" class="bottom-icon list"></div>
+                    <!-- 倍速 -->
+                    <div id="speed" class="speed">1.0X</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 显示列表的按钮 -->
+    <div class="music-list" id="music-list">
+        <div class="music-list-container">
+            <div class="music-list-title">播放列表</div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="请输入歌曲名">
+                <select id="apiSelect">
+                    <option value="">选择音乐源</option>
+                    <option value="search1">网易云</option>
+                    <option value="search2">酷狗</option>
+                </select>
+                <div class="search-icon" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            <hr class="line">
+            <div class="all-list" id="music-items"></div>
+        </div>
+    </div>
+
+    <script src="js/click.js"></script>
+    <script src="js/mouse-click.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
