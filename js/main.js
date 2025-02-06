@@ -10,7 +10,7 @@ const backgrounds = [
     './img/bg8.jpg',
     './img/bg9.jpg',
     './img/bg10.jpg',
-    './img/bg11 .jpg',
+    './img/bg11.jpg',
 ];
 // 获取衣服图标元素
 const shirtIcon = document.getElementById("shirt-icon");

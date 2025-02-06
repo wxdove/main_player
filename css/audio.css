@@ -468,7 +468,7 @@ html, body {
 /* 调整歌词文本样式 */
 .lyrics-container p {
     font-size: 1.2rem !important;
-    color: rgba(130, 182, 41, 0.8) !important;
+    color: rgba(182, 41, 159, 0.8) !important;
     line-height: 2rem;
     margin-bottom: 1rem;
     text-align: center;
