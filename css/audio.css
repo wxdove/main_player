@@ -1,17 +1,21 @@
+/* 全局样式重置 */
  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* 设置body的样式 */
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+/* 设置背景图片的过渡效果 */
 #body {
     transition: background-image 1s ease-in-out;
 }
+/* 在#body元素前添加一个半透明的黑色遮罩 */
 #body::before {
     content: '';
     position: absolute;
@@ -22,6 +26,7 @@ body {
     background: rgba(0, 0, 0, 0.3); /* 半透明的黑色遮罩 */
     pointer-events: none; /* 确保不会干扰页面交互 */
 }
+/* 设置html和body的高度，背景大小和模糊效果 */
 html, body {
     height: 100%;
     background-size: cover;
@@ -29,6 +34,7 @@ html, body {
     overflow: hidden;
 }
 
+/* 设置上部分的容器样式 */
 .upper-container {
     width: 80%;
     padding-left: 10%;
@@ -37,6 +43,7 @@ html, body {
     text-align: center;
 }
 
+/* 设置记录容器的样式 */
 .record-container {
     width: 50%;
     height: 100%;
@@ -46,6 +53,7 @@ html, body {
     float: left;
 }
 
+/* 设置记录背景的样式 */
 .record-bg {
     background-color: black;
     display: flex;
@@ -56,6 +64,7 @@ html, body {
     border-radius: 400px;
 }
 
+/* 设置记录图片的样式 */
 #record-img {
     background-image: url("../img/record1.jpg");
     background-size: 100% 100%;
@@ -67,6 +76,7 @@ html, body {
     border-radius: 250px;
 }
 
+/* 设置记录中心的样式 */
 .record-center {
     background-color: black;
     width: 20px;
@@ -74,6 +84,7 @@ html, body {
     border-radius: 20px;
 }
 
+/* 设置介绍容器的样式 */
 .introduction-container {
     width: 50%;
     height: 100%;
@@ -83,6 +94,7 @@ html, body {
     float: left;
 }
 
+/* 设置文本容器的样式 */
 .text-container {
     width: 80%;
     padding-left: 20%;
@@ -96,18 +108,21 @@ html, body {
 
 
 
+/* 设置音乐标题的样式 */
 #music-title {
     color: rgba(218, 136, 136, 0.89);
     font-size: 3rem;
     line-height: 6rem;
 }
 
+/* 设置作者容器的样式 */
 .author-container {
     color: rgb(15, 227, 234);
     font-size: 1.5rem;
 
 }
 
+/* 设置音频元素的样式 */
 .audio {
     width: 100%;
 }
