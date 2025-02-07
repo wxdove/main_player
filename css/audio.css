@@ -12,6 +12,16 @@ body {
 #body {
     transition: background-image 1s ease-in-out;
 }
+#body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* 半透明的黑色遮罩 */
+    pointer-events: none; /* 确保不会干扰页面交互 */
+}
 html, body {
     height: 100%;
     background-size: cover;
