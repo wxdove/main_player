@@ -55,7 +55,7 @@ def fetch_play_url(mix_song_id):
         "sec-fetch-dest": "empty",
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-site",
-        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
+        "user-agent": f"{ua.random}"
     }
     try:
         response = session.get(url, headers=headers,params=params)
