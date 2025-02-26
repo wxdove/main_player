@@ -1,46 +1,45 @@
+### 项目介绍
+`main_player` 是一个音乐播放器，调用网易云和酷狗的API获取音乐数据并播放。
 
-Here is a README for the `main_player` repository:
+### 项目特点
+- 支持网易云音乐和酷狗音乐的数据获取和播放。
+- 采用JavaScript、Python、CSS和HTML等技术实现。
 
-```
-# main_player
-
-一个音乐播放器，调用网易云和酷狗的API获取音乐数据并播放。
-
-## Features
-
-- 支持网易云音乐和酷狗音乐
-- 简洁的用户界面
-- 支持播放列表管理
-- 搜索和播放音乐
-
-## Installation
-
-1. Clone the repository:
+### 安装和使用
+1. 克隆仓库：
    ```bash
    git clone https://github.com/wxdove/main_player.git
    ```
-
-2. Install dependencies:
+2. 进入项目目录：
    ```bash
    cd main_player
+   ```
+3. 安装依赖：
+   ```bash
    npm install
    ```
-
-3. Start the application:
+4. 运行项目：
    ```bash
    npm start
    ```
+5. 打开浏览器访问 [http://localhost:3000](http://localhost:3000) 可以查看效果。
 
-## Usage
+### 文件结构
+- `src/`: 包含前端源代码。
+- `backend/`: 包含后端代码。
+- `public/`: 静态资源文件夹。
+- `README.md`: 项目说明文件。
 
-Open your web browser and navigate to `http://localhost:3000` to use the music player.
+### 主要功能
+- 音乐搜索：支持通过关键词搜索音乐。
+- 播放功能：支持播放、暂停、下一首、上一首等功能。
+- 歌词显示：支持同步显示歌词。
 
-## Technologies Used
+### 许可证
+本项目没有指定许可证。
 
-- JavaScript
-- Python
-- CSS
-- HTML
+### 项目链接
+访问项目主页 [main_player](https://github.com/wxdove/main_player) 获取更多信息。
 
 ## Screenshots
 
@@ -48,18 +47,3 @@ Open your web browser and navigate to `http://localhost:3000` to use the music p
 ![image](https://github.com/user-attachments/assets/cd8da700-b669-48f1-87eb-38d2c5e3a504)
 ![image](https://github.com/user-attachments/assets/2b82277f-fadb-470f-9ebf-ec0866e0d95b)
 ![image](https://github.com/user-attachments/assets/33aba038-3164-4cd4-aaa4-5a381af5c5dd)
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contributing
-
-Feel free to open issues or submit pull requests for improvements and bug fixes.
-
-## Contact
-
-For any inquiries, please contact [your-email@example.com](mailto:your-email@example.com).
-```
-
-You can customize it further based on your preferences and add any additional details you find necessary.
