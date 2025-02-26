@@ -171,7 +171,7 @@ searchBtn.addEventListener('click', function() {
 // 显示或隐藏加载动画
 const showLoading = (show) => {
   resultsContainer.innerHTML = show ?
-    `<div class="loading"><i class="fas fa-spinner fa-spin"></i> 小汪正在努力搜索...</div>`
+    `<div class="loading"><i class="fas fa-spinner fa-spin"></i> 正在努力搜索...</div>`
     : '';
 };
 // 监听搜索按钮点击事件
@@ -221,6 +221,8 @@ function searchMusic(query, source) {
         url = `http://127.0.0.1:5000/search1?q=${query}`;  // 网易云音乐的假设API
     } else if (source === 'search2') {
         url = `http://127.0.0.1:5000/search2?q=${query}`;  // 酷狗音乐的假设API
+    } else if (source === 'search3') {
+        url = `http://127.0.0.1:5000/search3?q=${query}`;  // 酷狗音乐的假设API
     }
 
     fetch(url)
@@ -242,10 +244,8 @@ function searchMusic(query, source) {
 }
 function initMusic(music) {
     if (!music) return;  // 如果没有音乐信息，直接返回
-
     main.src = music.play_url;  // 设置播放链接
     main.load();  // 重新加载音频
-
     // 更新 UI 显示歌曲信息
     musicTitle.innerText = music.SongName;  // 显示歌曲名称
     author.innerText = music.SingerName;  // 显示歌手名称
@@ -253,13 +253,11 @@ function initMusic(music) {
 
     // 解析歌词并更新歌词数组
     lyrics = parseLyrics(music.lyrics);  // 解析歌词
-
     // 如果有歌词，显示到页面
     let lyricsContainer = document.getElementById("lyrics-container");
     if (lyricsContainer) {
         lyricsContainer.innerText = music.lyrics || "暂无歌词";  // 默认显示歌词
     }
-
     // 更新音频时长和进度条
     main.ondurationchange = function () {
         audioTime.innerText = transTime(main.duration);

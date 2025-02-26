@@ -1,16 +1,25 @@
+# -*- coding: utf-8 -*-
 from flask import Flask, render_template, jsonify, request
+import subprocess
+from functools import partial
+subprocess.Popen = partial(subprocess.Popen, encoding='utf-8')
 import os
 from crawler import wyy_music
 from  crawler import kg_music
+from crawler import  my_free_mp3
 from flask_cors import CORS
+
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})  #
-# 基础配置
-app.config.update({
-    'TEMPLATES_AUTO_RELOAD': True,
-    'SEND_FILE_MAX_AGE_DEFAULT': 0
-})
+# 设置环境变量
+os.environ['PYTHONIOENCODING'] = 'utf-8'
+os.environ['LANG'] = 'en_US.UTF-8'
 
+# 基础配置
+app.config.update(
+    JSON_AS_ASCII=False,
+    JSONIFY_MIMETYPE='application/json; charset=utf-8'
+)
 
 @app.route('/')
 def index():
@@ -19,7 +28,6 @@ def index():
 
 @app.route('/search1')
 def search_api_wyy():
-    """搜索接口"""
     query = request.args.get('q', '')
     if not query:
         return jsonify([])
@@ -32,7 +40,6 @@ def search_api_wyy():
 
 @app.route('/search2')
 def search_api_kg():
-    """搜索接口"""
     query = request.args.get('q', '')
     if not query:
         return jsonify([])
@@ -42,6 +49,18 @@ def search_api_kg():
     except Exception as e:
         app.logger.error(f'搜索失败: {str(e)}')
         return jsonify({'error': '搜索服务暂不可用'}), 500
+
+
+@app.route('/search3')
+def search_api_free_mp3():
+    query = request.args.get('q', '')
+    query = query.encode('utf-8').decode('utf-8')
+    if not query:
+        return jsonify([])
+
+    result = my_free_mp3.get_rsearch(query)
+    return jsonify(result)
+
 
 if __name__ == '__main__':
     app.static_folder = os.path.abspath('static')

@@ -20,8 +20,8 @@ def fetch_play_url(mix_song_id):
         "mid=61af5064402d2bc3d834a9c2a65dbecf",
         "platid=4",
         "srcappid=2919",
-        "token=",
-        "userid=0",
+        "token=18bd6a34ed7deabdcb2a2a95d6cb979491589bfbf58164a4d191b9beae13f7e7",
+        "userid=1069521587",
         "uuid=61af5064402d2bc3d834a9c2a65dbecf",
         "NVPh5oo715z5DIWAeQlhMDsWXXQV4hwt"
     ]
@@ -38,23 +38,24 @@ def fetch_play_url(mix_song_id):
         "appid": "1014",
         "platid": "4",
         "encode_album_audio_id": f"{mix_song_id}",
-        "token": "",
-        "userid": "0",
+        "token": "18bd6a34ed7deabdcb2a2a95d6cb979491589bfbf58164a4d191b9beae13f7e7",
+        "userid": "1069521587",
         "signature": f"{signature}"
     }
     url = "https://wwwapi.kugou.com/play/songinfo"
     headers = {
         "accept": "*/*",
-        "accept-language": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6",
+        "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
         "origin": "https://www.kugou.com",
         "priority": "u=1, i",
         "referer": "https://www.kugou.com/",
+        "sec-ch-ua": "\"Not(A:Brand\";v=\"99\", \"Google Chrome\";v=\"133\", \"Chromium\";v=\"133\"",
         "sec-ch-ua-mobile": "?0",
         "sec-ch-ua-platform": "\"Windows\"",
         "sec-fetch-dest": "empty",
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-site",
-        "user-agent": f"{ua.random}"
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
     }
     try:
         response = session.get(url, headers=headers,params=params)
@@ -153,4 +154,4 @@ def fetch_music(keyword):
         return []
 
 if __name__ == '__main__':
-    print(fetch_music('薛之谦'))
+    print(fetch_music('悬溺'))
