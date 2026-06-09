@@ -221,9 +221,10 @@ function searchMusic(query, source) {
         url = `http://127.0.0.1:5000/search1?q=${query}`;  // 网易云音乐的假设API
     } else if (source === 'search2') {
         url = `http://127.0.0.1:5000/search2?q=${query}`;  // 酷狗音乐的假设API
-    } else if (source === 'search3') {
-        url = `http://127.0.0.1:5000/search3?q=${query}`;  // 酷狗音乐的假设API
     }
+    // } else if (source === 'search3') {
+    //     url = `http://127.0.0.1:5000/search3?q=${query}`;
+    // }
 
     fetch(url)
         .then(response => response.json())

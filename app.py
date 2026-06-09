@@ -50,16 +50,16 @@ def search_api_kg():
         app.logger.error(f'搜索失败: {str(e)}')
         return jsonify({'error': '搜索服务暂不可用'}), 500
 
-
-@app.route('/search3')
-def search_api_free_mp3():
-    query = request.args.get('q', '')
-    query = query.encode('utf-8').decode('utf-8')
-    if not query:
-        return jsonify([])
-
-    result = my_free_mp3.get_rsearch(query)
-    return jsonify(result)
+#
+# @app.route('/search3')
+# def search_api_free_mp3():
+#     query = request.args.get('q', '')
+#     query = query.encode('utf-8').decode('utf-8')
+#     if not query:
+#         return jsonify([])
+#
+#     result = my_free_mp3.get_rsearch(query)
+#     return jsonify(result)
 
 
 if __name__ == '__main__':

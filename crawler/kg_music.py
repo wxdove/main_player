@@ -20,7 +20,7 @@ def fetch_play_url(mix_song_id):
         "mid=61af5064402d2bc3d834a9c2a65dbecf",
         "platid=4",
         "srcappid=2919",
-        "token=18bd6a34ed7deabdcb2a2a95d6cb979491589bfbf58164a4d191b9beae13f7e7",
+        "token=18bd6a34ed7deabdcb2a2a95d6cb9794c2427845ebd8fccb651af02d585f04df",
         "userid=1069521587",
         "uuid=61af5064402d2bc3d834a9c2a65dbecf",
         "NVPh5oo715z5DIWAeQlhMDsWXXQV4hwt"
@@ -38,24 +38,22 @@ def fetch_play_url(mix_song_id):
         "appid": "1014",
         "platid": "4",
         "encode_album_audio_id": f"{mix_song_id}",
-        "token": "18bd6a34ed7deabdcb2a2a95d6cb979491589bfbf58164a4d191b9beae13f7e7",
+        "token": "18bd6a34ed7deabdcb2a2a95d6cb9794c2427845ebd8fccb651af02d585f04df",
         "userid": "1069521587",
         "signature": f"{signature}"
     }
     url = "https://wwwapi.kugou.com/play/songinfo"
-    headers = {
-        "accept": "*/*",
-        "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-        "origin": "https://www.kugou.com",
-        "priority": "u=1, i",
-        "referer": "https://www.kugou.com/",
-        "sec-ch-ua": "\"Not(A:Brand\";v=\"99\", \"Google Chrome\";v=\"133\", \"Chromium\";v=\"133\"",
-        "sec-ch-ua-mobile": "?0",
-        "sec-ch-ua-platform": "\"Windows\"",
-        "sec-fetch-dest": "empty",
-        "sec-fetch-mode": "cors",
-        "sec-fetch-site": "same-site",
-        "user-agent": f"{ua.random}"
+    headers ={
+        "^accept": "*/*^",
+        "^accept-language": "zh-CN,zh;q=0.9^",
+        "^referer": "https://www.kugou.com/^",
+        "^sec-ch-ua": "^\\^Google",
+        "^sec-ch-ua-mobile": "?0^",
+        "^sec-ch-ua-platform": "^\\^Windows^^^",
+        "^sec-fetch-dest": "script^",
+        "^sec-fetch-mode": "no-cors^",
+        "^sec-fetch-site": "same-site^",
+        "^user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36^"
     }
     try:
         response = session.get(url, headers=headers,params=params)
@@ -74,21 +72,21 @@ def fetch_music(keyword):
         "callback=callback123",
         f"clienttime={local_time}",
         "clientver=1000",
-        "dfid=3x6k4z42n6FG4CnvV90WqHgx",
+        "dfid=11RQfS2Fwjxa2PXGrP2AtMBY",
         "filter=10",
         "inputtype=0",
         "iscorrection=1",
         "isfuzzy=0",
         f"keyword={keyword}",
-        "mid=60fed3a62a77c763aeb0f706db5c982e",
+        "mid=61af5064402d2bc3d834a9c2a65dbecf",
         "page=1",
         "pagesize=30",
         "platform=WebFilter",
         "privilege_filter=0",
         "srcappid=2919",
-        "token=18bd6a34ed7deabdcb2a2a95d6cb97949fd7262d129a774fd27344d891b0a8aa",
+        "token=18bd6a34ed7deabdcb2a2a95d6cb9794c2427845ebd8fccb651af02d585f04df",
         "userid=1069521587",
-        "uuid=60fed3a62a77c763aeb0f706db5c982e",
+        "uuid=61af5064402d2bc3d834a9c2a65dbecf",
         "NVPh5oo715z5DIWAeQlhMDsWXXQV4hwt"
     ]
     data = "".join(text)
@@ -98,9 +96,9 @@ def fetch_music(keyword):
         "srcappid": "2919",
         "clientver": "1000",
         "clienttime": local_time,
-        "mid": "60fed3a62a77c763aeb0f706db5c982e",
-        "uuid": "60fed3a62a77c763aeb0f706db5c982e",
-        "dfid": "3x6k4z42n6FG4CnvV90WqHgx",
+        "mid": "61af5064402d2bc3d834a9c2a65dbecf",
+        "uuid": "61af5064402d2bc3d834a9c2a65dbecf",
+        "dfid": "11RQfS2Fwjxa2PXGrP2AtMBY",
         "keyword": keyword,
         "page": "1",
         "pagesize": "30",
@@ -112,31 +110,38 @@ def fetch_music(keyword):
         "iscorrection": "1",
         "privilege_filter": "0",
         "filter": "10",
-        "token": "18bd6a34ed7deabdcb2a2a95d6cb97949fd7262d129a774fd27344d891b0a8aa",
+        "token": "18bd6a34ed7deabdcb2a2a95d6cb9794c2427845ebd8fccb651af02d585f04df",
         "appid": "1014",
         "signature": signature
     }
     cookies = {
-        "kg_mid": "61af5064402d2bc3d834a9c2a65dbecf",
+        "^kg_mid": "61af5064402d2bc3d834a9c2a65dbecf",
         "kg_dfid": "11RQfS2Fwjxa2PXGrP2AtMBY",
         "kg_dfid_collect": "d41d8cd98f00b204e9800998ecf8427e",
-        "Hm_lvt_aedee6983d4cfc62f509129360d6bb3d": "1738834878,1738834962,1738834979,1738837683",
-        "HMACCOUNT": "B2BFE85C6C1D3879",
+        "Hm_lvt_aedee6983d4cfc62f509129360d6bb3d": "1766581675",
+        "HMACCOUNT": "CEA1EF9AD2C7D46B",
         "kg_mid_temp": "61af5064402d2bc3d834a9c2a65dbecf",
-        "Hm_lpvt_aedee6983d4cfc62f509129360d6bb3d": "1738837695"
+        "KuGoo": "KugooID=1069521587^&KugooPwd=9F6CE1F2D94DE5C09BC3A953D9F56B56^&NickName=^%^u0053^%^u0061^%^u0062^%^u0072^%^u0069^%^u006e^%^u0061^&Pic=http://imge.kugou.com/kugouicon/165/20251220/20251220214348233085.jpg^&RegState=1^&RegFrom=^&t=18bd6a34ed7deabdcb2a2a95d6cb9794c2427845ebd8fccb651af02d585f04df^&a_id=1014^&ct=1766581829^&UserName=^%^u006b^%^u0067^%^u006f^%^u0070^%^u0065^%^u006e^%^u0031^%^u0030^%^u0036^%^u0039^%^u0035^%^u0032^%^u0031^%^u0035^%^u0038^%^u0037^&t1=",
+        "KugooID": "1069521587",
+        "t": "18bd6a34ed7deabdcb2a2a95d6cb9794c2427845ebd8fccb651af02d585f04df",
+        "a_id": "1014",
+        "UserName": "kgopen1069521587",
+        "mid": "61af5064402d2bc3d834a9c2a65dbecf",
+        "dfid": "11RQfS2Fwjxa2PXGrP2AtMBY",
+        "Hm_lpvt_aedee6983d4cfc62f509129360d6bb3d": "1766581938^"
     }
-    headers = {
-        "accept": "*/*",
-        "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-        "referer": "https://www.kugou.com/",
-        "sec-ch-ua": "\"Not A(Brand\";v=\"8\", \"Chromium\";v=\"132\", \"Google Chrome\";v=\"132\"",
-        "sec-ch-ua-mobile": "?0",
-        "sec-ch-ua-platform": "\"Windows\"",
-        "sec-fetch-dest": "script",
-        "sec-fetch-mode": "no-cors",
-        "sec-fetch-site": "same-site",
-        "user-agent": f"{ua.random}"
-    }
+    headers =  {
+    "^accept": "*/*^",
+    "^accept-language": "zh-CN,zh;q=0.9^",
+    "^referer": "https://www.kugou.com/^",
+    "^sec-ch-ua": "^\\^Google",
+    "^sec-ch-ua-mobile": "?0^",
+    "^sec-ch-ua-platform": "^\\^Windows^^^",
+    "^sec-fetch-dest": "script^",
+    "^sec-fetch-mode": "no-cors^",
+    "^sec-fetch-site": "same-site^",
+    "^user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36^"
+}
     url = "https://complexsearch.kugou.com/v2/search/song"
     try:
         result = session.get(url, headers=headers,cookies=cookies,params=params).text[12:-2]
